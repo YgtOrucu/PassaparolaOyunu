@@ -101,7 +101,6 @@
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(151, 25);
             this.txtSifre.TabIndex = 3;
-            this.txtSifre.Text = "1234";
             this.txtSifre.UseSystemPasswordChar = true;
             // 
             // txtKullanıcı
@@ -112,7 +111,6 @@
             this.txtKullanıcı.Name = "txtKullanıcı";
             this.txtKullanıcı.Size = new System.Drawing.Size(151, 25);
             this.txtKullanıcı.TabIndex = 2;
-            this.txtKullanıcı.Text = "Yigit12.";
             // 
             // label4
             // 
