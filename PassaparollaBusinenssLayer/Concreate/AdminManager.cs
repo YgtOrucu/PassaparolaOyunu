@@ -19,7 +19,6 @@ namespace PassaparollaBusinenssLayer.Concreate
             _validationRules = validationRules;
             _validationRulesSorular = validationRulesSorular;
         }
-
         public List<Sorular> TDurumandHarfeGöreListe(string harf, bool durum)
         {
             return _adminDal.DurumandHarfeGöreListe(harf, durum);
@@ -29,7 +28,6 @@ namespace PassaparollaBusinenssLayer.Concreate
         {
             _adminDal.Delete(ıd);
         }
-
         public Admin TGetAdminUsers(string kullanıcıadı, string sıfre)
         {
 

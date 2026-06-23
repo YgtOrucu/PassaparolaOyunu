@@ -1,12 +1,9 @@
 ﻿using PassaparollaDataAccessLayer.Abstract;
 using PassaparollaDataAccessLayer.Context;
 using PassaparollaEntityLayer.ConCreate;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PassaparollaDataAccessLayer.Repository
 {

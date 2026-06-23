@@ -1,9 +1,5 @@
 ﻿using PassaparollaEntityLayer.ConCreate;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PassaparollaBusinenssLayer.Abstract
 {
@@ -11,11 +7,11 @@ namespace PassaparollaBusinenssLayer.Abstract
     {
         Admin TGetAdminUsers(string kullanıcıadı, string sıfre);
 
-        void TInsert(Sorular sorular); //Soru Ekleme
-        void TDelete(int ıd); //Soru Silme
-        void TUpdate(Sorular sorular); //Soru Güncelleme
-        List<Sorular> TGetList();//Soru Listeleme
-        List<Sorular> TGetDurumList(bool durum); ///Duruma göre Listeleme
+        void TInsert(Sorular sorular); 
+        void TDelete(int ıd); 
+        void TUpdate(Sorular sorular); 
+        List<Sorular> TGetList();
+        List<Sorular> TGetDurumList(bool durum);
         Sorular TGetByID(int ıd);
         List<Sorular> TDurumandHarfeGöreListe(string harf, bool durum);
     }

@@ -1,11 +1,7 @@
 ﻿using PassaparollaBusinenssLayer.Abstract;
 using PassaparollaDataAccessLayer.Abstract;
 using PassaparollaEntityLayer.ConCreate;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PassaparollaBusinenssLayer.Concreate
 {
@@ -21,7 +17,6 @@ namespace PassaparollaBusinenssLayer.Concreate
         {
             _sorularDal.Delete(sorular);
         }
-
         public List<Sorular> TGetList()
         {
             return _sorularDal.GetList();
@@ -31,7 +26,6 @@ namespace PassaparollaBusinenssLayer.Concreate
         {
             _sorularDal.Insert(sorular);
         }
-
         public void TUpdate(Sorular sorular)
         {
             _sorularDal.Update(sorular);
