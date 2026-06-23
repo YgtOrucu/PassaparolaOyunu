@@ -1,7 +1,6 @@
 ﻿using PassaparollaBusinenssLayer.Abstract;
 using PassaparollaBusinenssLayer.Concreate;
 using PassaparollaBusinenssLayer.Valitadion;
-using PassaparollaDataAccessLayer.Abstract;
 using PassaparollaDataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -20,7 +19,7 @@ namespace PassaparollaPresentationLayer.Formlar
         Dictionary<string, string> GetAllQuestion = new Dictionary<string, string>();
         Dictionary<string, string> GetPassQuestion = new Dictionary<string, string>();
         List<int> getpasSoruNo = new List<int>();
-        Button[] HarfButtons = new Button[26];
+        Button[] HarfButtons = new Button[28];
 
         int soruno; int pasIndex = 0; int pas = 0, dogru = 0, yanlıs = 0;
         string currentanswer;
@@ -99,24 +98,18 @@ namespace PassaparollaPresentationLayer.Formlar
             #endregion
             #region GetButtons
 
-            // Önce paneli temizle (tekrar yüklemelerde sorun olmasın)
             pnlLetters.SuspendLayout();
             pnlLetters.Controls.Clear();
+            char[] harfler = "ABCÇDEFGHIİJKLMNOÖPRSŞTUÜVYZ".ToCharArray();
 
-            // Harf dizisi (A'dan Z'ye)
-            char[] harfler = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-
-            // Boyut/ölçü ayarları
-            int butonSize = 37;                 // buton çapı
-            int margin = 8;                     // buton ile panel kenarı arası boşluk
+            int butonSize = 37;                 
+            int margin = 8;                   
             int panelW = Math.Max(1, pnlLetters.ClientSize.Width);
             int panelH = Math.Max(1, pnlLetters.ClientSize.Height);
 
-            // radius hesaplama; negatif olmamasına dikkat et
             int radius = Math.Min(panelW, panelH) / 2 - (butonSize / 2) - margin;
             if (radius < 30)
             {
-                // Panel çok küçükse butonları küçült
                 butonSize = Math.Max(28, Math.Min(panelW, panelH) / 6);
                 radius = Math.Min(panelW, panelH) / 2 - (butonSize / 2) - margin;
             }
@@ -124,39 +117,41 @@ namespace PassaparollaPresentationLayer.Formlar
             int centerX = panelW / 2;
             int centerY = panelH / 2;
 
-            int n = harfler.Length; // 26
+            int n = harfler.Length;
 
             for (int i = 0; i < n; i++)
             {
-                // Başlangıç 90° yukarı: -PI/2
                 double angle = (i * (2 * Math.PI / n)) - Math.PI / 2.0;
 
                 int x = centerX + (int)(radius * Math.Cos(angle)) - butonSize / 2;
                 int y = centerY + (int)(radius * Math.Sin(angle)) - butonSize / 2;
 
                 Button btn = new Button();
-                btn.SetBounds(x, y, butonSize, butonSize); // hem konum hem boyut
+                btn.SetBounds(x, y, butonSize, butonSize);
                 btn.Text = harfler[i].ToString();
-                btn.Name = "btn" + harfler[i]; // benzersiz isim
+                btn.Name = "btn" + harfler[i];
                 btn.Tag = i;
-                btn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+
+                btn.Font = new Font("Poppins", 11F, FontStyle.Bold);
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 0;
-                btn.BackColor = Color.FromArgb(70, 90, 110);
+
+                btn.BackColor = Color.FromArgb(26, 58, 92);
                 btn.ForeColor = Color.White;
                 btn.Cursor = Cursors.Hand;
                 btn.Visible = true;
-                btn.Enabled = false; // istersen başlangıçta pasif
+                btn.Enabled = false;
 
-                // Yuvarlak yapmak için Region (GraphicsPath kullan)
                 var gp = new System.Drawing.Drawing2D.GraphicsPath();
                 gp.AddEllipse(0, 0, butonSize, butonSize);
                 btn.Region = new Region(gp);
                 pnlLetters.Controls.Add(btn);
+
                 HarfButtons[i] = btn;
             }
 
             pnlLetters.ResumeLayout();
+
             #endregion
         }
 
@@ -276,7 +271,6 @@ namespace PassaparollaPresentationLayer.Formlar
             }
             else
             {
-                // Sorular bittiğinde, pas varsa o tura geç
                 if (GetPassQuestion.Count > 0)
                 {
                     pasmode = true;
