@@ -44,19 +44,23 @@ Bu proje sayesinde:
 
 ## 📸 Ekran Görüntüleri
 
-<img width="626" height="383" alt="Ekran görüntüsü 2026-01-03 210755" src="https://github.com/user-attachments/assets/8b8c90ba-e104-432d-accd-b177b4203fa5" />
+<img width="625" height="392" alt="Ekran görüntüsü 2026-06-23 182116" src="https://github.com/user-attachments/assets/752ffa07-0ad7-47d3-8bc4-d2e8e4eaf8f6" />
 
 ---
 
-<img width="1013" height="703" alt="Ekran görüntüsü 2026-01-03 210830" src="https://github.com/user-attachments/assets/9850ca5d-f334-4c71-9ce1-bc8ed0252c07" />
+<img width="1021" height="785" alt="Ekran görüntüsü 2026-06-23 182159" src="https://github.com/user-attachments/assets/8f4990fe-5978-4262-ab6a-529ba2d462ca" />
 
 ---
 
-<img width="923" height="485" alt="Ekran görüntüsü 2026-01-03 210849" src="https://github.com/user-attachments/assets/1060cb65-2c11-4303-8101-a1a48787059d" />
+<img width="945" height="509" alt="Ekran görüntüsü 2026-06-23 183204" src="https://github.com/user-attachments/assets/dd60101e-d0c3-4534-9102-e0cb8da7d034" />
 
 ---
 
-<img width="915" height="486" alt="Ekran görüntüsü 2026-01-03 210923" src="https://github.com/user-attachments/assets/bd9f6ed2-32ed-4bd3-9e9d-12aa33a7b97d" />
+<img width="944" height="507" alt="Ekran görüntüsü 2026-06-23 183438" src="https://github.com/user-attachments/assets/4a2b5271-ead9-458a-93f6-1d31f7050a3b" />
+
+---
+
+<img width="937" height="503" alt="Ekran görüntüsü 2026-06-23 183541" src="https://github.com/user-attachments/assets/eca05808-e608-469d-9de9-f437ca471345" />
 
 ---
 
